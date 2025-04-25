@@ -1,5 +1,21 @@
+@import './variables';
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.product-cart-container{
+  width: 100%;
+  padding: 0 5%;
+  @include flexCenter(column, center, center);
+  .product-image{
+    width: 100%;
+    border-radius: 8px;
+  }
 }
