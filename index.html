@@ -21,9 +21,9 @@
 </head>
 <body>
 
-  <div class="product-cart-container">
+`<div class="product-cart-container">
     <!-- OVERALL PRODUCT DISPLAY GRID -->
-    <div class="product-grid-container">
+  <div class="product-grid-container">
       <h1>Desserts</h1>
 
       <!-- ACTUAL PRODUCTS GRID -->
@@ -226,111 +226,158 @@
 
         
       </div>
-    </div>
+  </div>
 
-<!-- PICKED CART PRODUCT SECTION -->
+  <!-- PICKED CART PRODUCT SECTION -->
   <div class="cart-grid-container">
       <h2>Your Cart </h2>
       <div class="cart-empty-items">
         <img src="./assets/images/illustration-empty-cart.svg" alt="">
         <p>Your added items will appear here</p>
       </div>
-      <input type="checkbox" id="prod1" class=".hidden-checkbox">
-      <input type="checkbox" id="prod2" class=".hidden-checkbox">
-      <input type="checkbox" id="prod3" class=".hidden-checkbox">
-      <input type="checkbox" id="prod4" class=".hidden-checkbox">
-      <input type="checkbox" id="prod5" class=".hidden-checkbox">
-      <input type="checkbox" id="prod6" class=".hidden-checkbox">
-      <input type="checkbox" id="prod7" class=".hidden-checkbox">
-      <input type="checkbox" id="prod8" class=".hidden-checkbox">
-      <input type="checkbox" id="prod9" class=".hidden-checkbox">
+      <input type="checkbox" id="prod1" class="hidden-checkbox">
+      <input type="checkbox" id="prod2" class="hidden-checkbox">
+      <input type="checkbox" id="prod3" class="hidden-checkbox">
+      <input type="checkbox" id="prod4" class="hidden-checkbox">
+      <input type="checkbox" id="prod5" class="hidden-checkbox">
+      <input type="checkbox" id="prod6" class="hidden-checkbox">
+      <input type="checkbox" id="prod7" class="hidden-checkbox">
+      <input type="checkbox" id="prod8" class="hidden-checkbox">
+      <input type="checkbox" id="prod9" class="hidden-checkbox">
 
       <div class="cart-picked-items">
 
-        <div class="cart-item cart-item1">
-          <div class="cart-item-product">
-            <p class="cart-item-product-name">Waffle with Berries</p>
-            <p class="cart-item-product-price"><span>1x</span><span>@ $6.50</span>$6.50</p>
+        <div class="cart-item-divider cart-item1">
+          <div class="cart-item ">
+            <div class="cart-item-product">
+              <p class="cart-item-product-name">Waffle with Berries</p>
+              <p class="cart-item-product-price"><span>1x</span><span>@ $6.50</span><span>$6.50</span></p>
+            </div>
+            <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>  
           </div>
-          <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
+          <hr>
         </div>
-        <div class="cart-item cart-item2">
-          <div class="cart-item-product">
-            <p class="cart-item-product-name">Vanilla Bean Crème Brûlée</p>
-            <p class="cart-item-product-price"><span>1x</span><span>@ $7.00</span>$7.00</p>
+
+        <div class="cart-item-divider cart-item2">
+          <div class="cart-item ">
+            <div class="cart-item-product">
+              <p class="cart-item-product-name">Vanilla Bean Crème Brûlée</p>
+              <p class="cart-item-product-price"><span>1x</span><span>@ $7.00</span><span>$7.00</span></p>
+            </div>
+            <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
+          </div> 
+          <hr>
+        </div>
+
+        <div class="cart-item-divider cart-item3">
+          <div class="cart-item ">
+            <div class="cart-item-product">
+              <p class="cart-item-product-name">Macaron Mix of Five</p>
+              <p class="cart-item-product-price"><span>1x</span><span>@ $8.00</span><span>$8.00</span></p>
+            </div>
+            <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
           </div>
-          <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
-        </div> 
-        <div class="cart-item cart-item3">
-          <div class="cart-item-product">
-            <p class="cart-item-product-name">Macaron Mix of Five</p>
-            <p class="cart-item-product-price"><span>1x</span><span>@ $8.00</span>$8.00</p>
+          <hr>
+        </div>
+
+        <div class="cart-item-divider cart-item4">
+          <div class="cart-item ">
+            <div class="cart-item-product">
+              <p class="cart-item-product-name">Classic Tiramisu</p>
+              <p class="cart-item-product-price"><span>1x</span><span>@ $5.50</span><span>$5.50</span></p>
+            </div>
+            <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
           </div>
-          <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
+          <hr>
         </div>
-        <div class="cart-item cart-item4">
-          <div class="cart-item-product">
-            <p class="cart-item-product-name">Classic Tiramisu</p>
-            <p class="cart-item-product-price"><span>1x</span><span>@ $5.50</span>$5.50</p>
+
+
+        <div class="cart-item-divider cart-item5">
+          <div class="cart-item ">
+            <div class="cart-item-product">
+              <p class="cart-item-product-name">Pistachio Baklava</p>
+              <p class="cart-item-product-price"><span>1x</span><span>@ $4.00</span><span>$4.00</span></p>
+            </div>
+            <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
           </div>
-          <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
+          <hr>
         </div>
-        <div class="cart-item cart-item5">
-          <div class="cart-item-product">
-            <p class="cart-item-product-name">Pistachio Baklava</p>
-            <p class="cart-item-product-price"><span>1x</span><span>@ $4.00</span>$4.00</p>
+
+        <div class="cart-item-divider cart-item6">
+          <div class="cart-item ">
+            <div class="cart-item-product">
+              <p class="cart-item-product-name">Lemon Meringue Pie</p>
+              <p class="cart-item-product-price"><span>1x</span><span>@ $5.00</span><span>$5.00</span></p>
+            </div>
+            <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
           </div>
-          <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
+          <hr>
         </div>
-        <div class="cart-item cart-item6">
-          <div class="cart-item-product">
-            <p class="cart-item-product-name">Lemon Meringue Pie</p>
-            <p class="cart-item-product-price"><span>1x</span><span>@ $5.00</span>$5.00</p>
+
+        <div class="cart-item-divider cart-item7">
+          <div class="cart-item ">
+            <div class="cart-item-product">
+              <p class="cart-item-product-name">Red Velvet Cake</p>
+              <p class="cart-item-product-price"><span>1x</span><span>@ $4.50</span><span>$4.50</span></p>
+            </div>
+            <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
           </div>
-          <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
+          <hr>
         </div>
-        <div class="cart-item cart-item7">
-          <div class="cart-item-product">
-            <p class="cart-item-product-name">Red Velvet Cake</p>
-            <p class="cart-item-product-price"><span>1x</span><span>@ $4.50</span>$4.50</p>
-          <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
-        </div>
-        <div class="cart-item cart-item8">
-          <div class="cart-item-product">
-            <p class="cart-item-product-name">Salted Caramel Brownie</p>
-            <p class="cart-item-product-price"><span>1x</span><span>@ $5.50</span>$5.50</p>
+
+        <div class="cart-item-divider cart-item8">
+          <div class="cart-item ">
+            <div class="cart-item-product">
+              <p class="cart-item-product-name">Salted Caramel Brownie</p>
+              <p class="cart-item-product-price"><span>1x</span><span>@ $5.50</span><span>$5.50</span></p>
+            </div>
+            <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
           </div>
-          <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
+          <hr>
         </div>
-        <div class="cart-item cart-item9">
-          <div class="cart-item-product">
-            <p class="cart-item-product-name">Vanilla Panna Cotta</p>
-            <p class="cart-item-product-price"><span>1x</span><span>@ $6.50</span>$6.50</p>
+
+        <div class="cart-item-divider cart-item9">
+          <div class="cart-item ">
+            <div class="cart-item-product">
+              <p class="cart-item-product-name">Vanilla Panna Cotta</p>
+              <p class="cart-item-product-price"><span>1x</span><span>@ $6.50</span><span>$6.50</span></p>
+            </div>
+            <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
           </div>
-          <button><img src="./assets/images/icon-remove-item.svg" alt=""></button>
+          <hr>
         </div>
+
+
+      <div class="order-summary">
+        <div class="delivery-cost">
+          <p>Delivery fee</p>
+          <p>$10</p>
+        </div>
+        
+  
+        <div class="carbon-order-container">
+          <img src="./assets/images/icon-carbon-neutral.svg" alt="">
+          <p class="carbon-order-text">This is a <span>carbon-neutral</span> delivery</p>
+        </div>
+  
+        <button class="Confirm-button">Confirm Order</button>
+      </div>
+      
 
       </div>
       
-      </div>
-
-      <p class="love">We love You</p>
-
-      <div class="carbon-order-container">
-        <img src="./assets/images/icon-carbon-neutral.svg" alt="">
-        <p class="carbon-order-text">This is a <span>icon-carbon-neutral</span> delivery</p>
-      </div>
-
-      <button class="Confirm-button">Confirm Order</button>
-   
   </div>
+
+      
+   
+
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Adeluka Pelumi</a>.
   </div>
 
-  </div>
+`</div>
   
 </body>
 </html>
