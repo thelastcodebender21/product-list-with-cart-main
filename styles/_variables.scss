@@ -1,8 +1,11 @@
+$product-type-color : hsl(7, 20%, 60%);
+$product-name-color :  hsl(14, 65%, 9%);
+$product-price-color : hsl(14, 86%, 42%);
+
 @mixin flexCenter($direction, $align, $justify){
   display: flex;
   flex-direction: $direction;
   align-items: $align;
   justify-content: $justify;
   
-
 }

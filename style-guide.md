@@ -11,6 +11,8 @@ The designs were created to the following widths:
 
 ## Colors
 
+  #FCF8F5
+
 - Red: hsl(14, 86%, 42%)
 - Green: hsl(159, 69%, 38%)
 

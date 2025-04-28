@@ -7,15 +7,122 @@
 }
 
 body{
-  overflow-x: hidden;
+  // overflow-x: hidden;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 16px;
+  background-color: hsl(13, 31%, 94%);
+  width: 100vw;
 }
+
+
+
+button{
+  font-family: "Red Hat Text", sans-serif;
+}
+
+// COMBINATION OF THE PRODUCT GRID AND THE CART GRID
 
 .product-cart-container{
   width: 100%;
-  padding: 0 5%;
+  padding: 0 6%;
   @include flexCenter(column, center, center);
-  .product-image{
-    width: 100%;
-    border-radius: 8px;
+
+  // THE PRODUCT GRID
+  .product-grid-container{
+    h1{
+      margin: 35px 0;
+      font-size: 36px;
+      line-height: 100%;
+      letter-spacing: 0;
+      font-weight: 700;
+    }
+
+    .product-image{
+      width: 100%;
+    }
+
+    .product-grid{
+      display: flex;
+      @include flexCenter(column, center, center);
+      gap: 30px;
+      .product{
+        width: 100%;
+        .imageandbutton{
+          width: 100%;
+          display: flex;
+          @include flexCenter(column, center, center);
+          .product-image{
+            object-fit: contain;
+            border-radius: 8px;
+          }
+          .add-to-cart-button{
+            display: flex;
+            @include flexCenter(row, center, center);
+            padding: 9px 24px;
+            border-radius: 32px;
+            gap: 8px;
+            color: $product-name-color;
+            font-weight: 600;
+            border: 1px solid hsl(7, 20%, 60%);
+            background-color: hsl(20, 50%, 98%);
+            margin-top: -22px;
+            width: 45vw;
+          }
+
+          .add-to-cart-button-active{
+            display: flex;
+            @include flexCenter(row, center, center);
+            background-color: hsl(14, 86%, 42%);
+            color: white;
+            gap: 12vw;
+            padding: 10px 24px;
+            border-radius: 32px;
+            border: none;
+            width: 45vw;
+            .quantity-button{
+              background: none;
+              border: 1px solid white;
+              border-radius: 50%;
+              display: flex;
+              @include flexCenter(row, center, center);
+              padding: 8px;
+              width: 10px;
+              height: 10px;
+            }
+          }
+
+        }
+
+        .product-information{
+          display: flex;
+          @include flexCenter(column, start, center);
+          gap: 5px;
+          .product-type{
+            font-size: 14px;
+            color: $product-type-color;
+            font-weight: 400;
+          }
+          .product-name{
+            color: $product-name-color;
+            font-weight: 600;
+          }
+          .product-price{
+            color: $product-price-color;
+            font-weight: 600;
+            font-size: 16px;
+          }
+
+        }
+       
+
+
+      }
+    }
+  }
+ 
+
+  // THE CART GRID
+  .cart-grid-container{
+
   }
 }

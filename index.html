@@ -20,153 +20,211 @@
   </style>
 </head>
 <body>
+
   <div class="product-cart-container">
+    <!-- OVERALL PRODUCT DISPLAY GRID -->
     <div class="product-grid-container">
       <h1>Desserts</h1>
 
+      <!-- ACTUAL PRODUCTS GRID -->
       <div class="product-grid">
 
+        <!-- INDIVIDUAL PRODUCT  -->
         <div class="product">
-            <img src="./assets/images/image-waffle-mobile.jpg" alt="" class="product-image">
-            <p class="product-type">Waffle</p>
-            <p class="product-name">Waffle with Berries</p>
-            <p class="product-price">$6.50</p>
-            <label for="prod1">
-              <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
-            </label>  
-            <div class="add-to-cart-button-active">
-              <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
-              <span class="quantity-value">1</span>
-              <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
-            </div>  
-          
-        </div>
-
-        <div class="product">
-            <img src="./assets/images/image-creme-brulee-mobile.jpg" alt="" class="product-image">
-            <p class="product-type">Crème Brûlée</p>
-            <p class="product-name">Vanilla Bean Crème Brûlée</p>
-            <p class="product-price">$7.00</p>
-            <label for="prod2">
-              <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
-            </label>  
-            <div class="add-to-cart-button-active">
-              <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
-              <span class="quantity-value">1</span>
-              <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+            <div class="imageandbutton">
+                <img src="./assets/images/image-waffle-mobile.jpg" alt="" class="product-image">
+              <label for="prod1">
+                <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
+              </label>  
+              <div class="add-to-cart-button-active">
+                <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
+                <span class="quantity-value">1</span>
+                <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+              </div>  
             </div>
-          
-        </div>
-
-        <div class="product">
-            <img src="./assets/images/image-macaron-mobile.jpg" alt="" class="product-image">
-            <p class="product-type">Macaron</p>
-            <p class="product-name">Macaron Mix of Five</p>
-            <p class="product-price">$8.00</p>
-            <label for="prod3">
-              <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
-            </label>  
-            <div class="add-to-cart-button-active">
-              <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
-              <span class="quantity-value">1</span>
-              <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+            
+            <div class="product-information">
+              <p class="product-type">Waffle</p>
+              <p class="product-name">Waffle with Berries</p>
+              <p class="product-price">$6.50</p>
             </div>
-          
+
+        </div>
+
+        <!-- INDIVIDUAL PRODUCT -->
+        <div class="product">
+            <div class="imageandbutton">
+              <img src="./assets/images/image-creme-brulee-mobile.jpg" alt="" class="product-image">
+              <label for="prod2">
+                <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
+              </label>  
+              <div class="add-to-cart-button-active">
+                <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
+                <span class="quantity-value">1</span>
+                <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+              </div>
+            </div>
+            <div class="product-information">
+              <p class="product-type">Crème Brûlée</p>
+              <p class="product-name">Vanilla Bean Crème Brûlée</p>
+              <p class="product-price">$7.00</p>
+            </div>
+        </div>
+
+        <!-- INDIVIDUAL PRODUCT -->
+        <div class="product">
+            <div class="imageandbutton">
+              <img src="./assets/images/image-macaron-mobile.jpg" alt="" class="product-image">
+              <label for="prod3">
+                <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
+              </label>  
+              <div class="add-to-cart-button-active">
+                <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
+                <span class="quantity-value">1</span>
+                <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+              </div>
+            </div>
+            <div class="product-information">
+              <p class="product-type">Macaron</p>
+              <p class="product-name">Macaron Mix of Five</p>
+              <p class="product-price">$8.00</p>
+            </div>          
         </div>
 
 
+        <!-- INDIVIDUAL PRODUCT -->
         <div class="product">
-            <img src="./assets/images/image-tiramisu-mobile.jpg" alt="" class="product-image">
-            <p class="product-type">Tiramisu</p>
-            <p class="product-name">Classic Tiramisu</p>
-            <p class="product-price">$5.50</p>
-            <label for="prod4">
-              <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
-            </label>
-            <div class="add-to-cart-button-active">
-              <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
-              <span class="quantity-value">1</span>
-              <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+            <div class="imageandbutton">
+              <img src="./assets/images/image-tiramisu-mobile.jpg" alt="" class="product-image">
+              <label for="prod4">
+                <button class="add-to-cart-button product-image"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
+              </label>
+              <div class="add-to-cart-button-active">
+                <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
+                <span class="quantity-value">1</span>
+                <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+              </div>
+            </div>
+            <div class="product-information">
+              <p class="product-type">Tiramisu</p>
+              <p class="product-name">Classic Tiramisu</p>
+              <p class="product-price">$5.50</p>
             </div>
           
         </div>
         
+        <!-- INDIVIDUAL PRODUCT -->
         <div class="product">
-            <img src="./assets/images/image-baklava-mobile.jpg" alt="" class="product-image">
-            <p class="product-type">Baklava</p>
-            <p class="product-name">Pistachio Baklava</p>
-            <p class="product-price">$4.00</p>
-            <label for="prod5">
-              <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
-            </label>
-            <div class="add-to-cart-button-active">
-              <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
-              <span class="quantity-value">1</span>
-              <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+            <div class="imageandbutton">
+              <img src="./assets/images/image-baklava-mobile.jpg" alt="" class="product-image">
+              <label for="prod5">
+                <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
+              </label>
+              <div class="add-to-cart-button-active">
+                <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
+                <span class="quantity-value">1</span>
+                <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+              </div>
+            </div>
+
+            <div class="product-information">
+              <p class="product-type">Baklava</p>
+              <p class="product-name">Pistachio Baklava</p>
+              <p class="product-price">$4.00</p>
             </div>
         </div>
 
 
+        <!-- INDIVIDUAL PRODUCT -->
         <div class="product">
-            <img src="./assets/images/image-meringue-mobile.jpg" alt="" class="product-image">
-            <p class="product-type">Pie</p>
-            <p class="product-name">Lemon Meringue Pie</p>
-            <p class="product-price">$5.00</p>
-            <label for="prod6">
-              <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
-            </label>
-            <div class="add-to-cart-button-active">
-              <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
-              <span class="quantity-value">1</span>
-              <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+            <div class="imageandbutton">
+              <img src="./assets/images/image-meringue-mobile.jpg" alt="" class="product-image">
+              <label for="prod6">
+                <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
+              </label>
+              <div class="add-to-cart-button-active">
+                <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
+                <span class="quantity-value">1</span>
+                <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+              </div>
+            </div>
+
+            <div class="product-information">
+              <p class="product-type">Pie</p>
+              <p class="product-name">Lemon Meringue Pie</p>
+              <p class="product-price">$5.00</p>
             </div>
         </div>
       
 
+        <!-- INDIVIDUAL PRODUCT -->
         <div class="product">
-            <img src="./assets/images/image-cake-mobile.jpg" alt="" class="product-image">
-            <p class="product-type">Cake</p>
-            <p class="product-name">Red Velvet Cake</p>
-            <p class="product-price">$4.50</p>
-            <label for="prod7">
-              <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
-            </label>
-            <div class="add-to-cart-button-active">
-              <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
-              <span class="quantity-value">1</span>
-              <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+            <div class="imageandbutton">
+              <img src="./assets/images/image-cake-mobile.jpg" alt="" class="product-image">
+              <label for="prod7">
+                <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
+              </label>
+              <div class="add-to-cart-button-active">
+                <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
+                <span class="quantity-value">1</span>
+                <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+              </div>
+            </div>
+            <div class="product-information">
+              <p class="product-type">Cake</p>
+              <p class="product-name">Red Velvet Cake</p>
+              <p class="product-price">$4.50</p>
             </div>
         </div>
       
+
+        <!-- INDIVIDUAL PRODUCT -->
         <div class="product">
-            <img src="./assets/images/image-brownie-mobile.jpg" alt="" class="product-image">
-            <p class="product-type">Brownie</p>
-            <p class="product-name">Salted Caramel Brownie</p>
-            <p class="product-price">$4.50</p>
-            <label for="prod8">
-              <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
-            </label>  
-            <div class="add-to-cart-button-active">
-              <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
-              <span class="quantity-value">1</span>
-              <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+            <div class="imageandbutton">
+              <img src="./assets/images/image-brownie-mobile.jpg" alt="" class="product-image">
+              <label for="prod8">
+                <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
+              </label>  
+              <div class="add-to-cart-button-active">
+                <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
+                <span class="quantity-value">1</span>
+                <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+              </div>
             </div>
+
+            <div class="product-information">
+              <p class="product-type">Brownie</p>
+              <p class="product-name">Salted Caramel Brownie</p>
+              <p class="product-price">$4.50</p>
+            </div>
+            
+           
         </div>
       
+
+        <!-- INDIVIDUAL PRODUCT -->
         <div class="product">
-            <img src="./assets/images/image-panna-cotta-mobile.jpg" alt="" class="product-image">
-            <p class="product-type">Panna Cotta</p>
-            <p class="product-name">Vanilla Panna Cotta</p>
-            <p class="product-price">$6.50</p>
-            <label for="prod9">
-              <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
-            </label>  
-            <div class="add-to-cart-button-active">
-              <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
-              <span class="quantity-value">1</span>
-              <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+            <div class="imageandbutton">
+              <img src="./assets/images/image-panna-cotta-mobile.jpg" alt="" class="product-image">
+              <label for="prod9">
+                <button class="add-to-cart-button"><span><img src="assets/images/icon-add-to-cart.svg" alt=""></span><span><p class="add-to-cart-text"> Add to Cart</p></span></button>
+              </label>  
+              <div class="add-to-cart-button-active">
+                <button class="quantity-button"><img src="./assets/images/icon-decrement-quantity.svg" alt=""></button>
+                <span class="quantity-value">1</span>
+                <button class="quantity-button"><img src="./assets/images/icon-increment-quantity.svg" alt=""></button>
+              </div>
             </div>
+
+            <div class="product-information">
+              <p class="product-type">Panna Cotta</p>
+              <p class="product-name">Vanilla Panna Cotta</p>
+              <p class="product-price">$6.50</p>
+            </div>
+            
         </div>
+
+        
       </div>
     </div>
 
