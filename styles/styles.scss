@@ -14,13 +14,20 @@ body{
   width: 100vw;
 }
 
-
+.hidden-checkbox{
+  display: flex; 
+}
 
 button{
   font-family: "Red Hat Text", sans-serif;
 }
 
 // COMBINATION OF THE PRODUCT GRID AND THE CART GRID
+
+
+
+
+
 
 .product-cart-container{
   width: 100%;
@@ -77,10 +84,11 @@ button{
             background-color: hsl(14, 86%, 42%);
             color: white;
             gap: 12vw;
-            padding: 10px 24px;
+            padding: 11px 24px;
             border-radius: 32px;
             border: none;
             width: 45vw;
+            margin-top: -22px;
             .quantity-button{
               background: none;
               border: 1px solid white;
@@ -92,7 +100,17 @@ button{
               height: 10px;
             }
           }
+          .add-label, .remove-label{
+            display: none !important;
+          }
 
+          #prod1:not(:checked) ~ .add-label, .cart-empty-items{
+            display: flex !important;
+          }
+
+          #prod1:checked ~ .remove-label{
+            display: flex !important;
+          }
         }
 
         .product-information{
@@ -145,6 +163,16 @@ button{
         font-size: 14px;
       }
     }
+
+    #prod1:checked ~ .cart-empty-items{  
+      display: none !important;
+    }
+
+    #prod1:checked ~ .cart-picked-items .cart-item1{
+      display: flex !important;
+    }
+
+
     .hidden-checkbox{
       display: none;
     }
@@ -154,7 +182,7 @@ button{
       display: flex;
       @include flexCenter(column, start, center);
       .cart-item-divider{
-        display: flex;
+        display: none !important;
         @include flexCenter(column, center, center);
         gap: 22px;
         width: 100%;

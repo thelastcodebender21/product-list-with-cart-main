@@ -11,6 +11,10 @@ body {
   width: 100vw;
 }
 
+.hidden-checkbox {
+  display: flex;
+}
+
 button {
   font-family: "Red Hat Text", sans-serif;
 }
@@ -83,10 +87,11 @@ button {
   background-color: hsl(14, 86%, 42%);
   color: white;
   gap: 12vw;
-  padding: 10px 24px;
+  padding: 11px 24px;
   border-radius: 32px;
   border: none;
   width: 45vw;
+  margin-top: -22px;
 }
 .product-cart-container .product-grid-container .product-grid .product .imageandbutton .add-to-cart-button-active .quantity-button {
   background: none;
@@ -100,6 +105,15 @@ button {
   padding: 8px;
   width: 10px;
   height: 10px;
+}
+.product-cart-container .product-grid-container .product-grid .product .imageandbutton .add-label, .product-cart-container .product-grid-container .product-grid .product .imageandbutton .remove-label {
+  display: none !important;
+}
+.product-cart-container .product-grid-container .product-grid .product .imageandbutton #prod1:not(:checked) ~ .add-label, .product-cart-container .product-grid-container .product-grid .product .imageandbutton .cart-empty-items {
+  display: flex !important;
+}
+.product-cart-container .product-grid-container .product-grid .product .imageandbutton #prod1:checked ~ .remove-label {
+  display: flex !important;
 }
 .product-cart-container .product-grid-container .product-grid .product .product-information {
   display: flex;
@@ -154,6 +168,12 @@ button {
   line-height: 100%;
   font-size: 14px;
 }
+.product-cart-container .cart-grid-container #prod1:checked ~ .cart-empty-items {
+  display: none !important;
+}
+.product-cart-container .cart-grid-container #prod1:checked ~ .cart-picked-items .cart-item1 {
+  display: flex !important;
+}
 .product-cart-container .cart-grid-container .hidden-checkbox {
   display: none;
 }
@@ -166,7 +186,7 @@ button {
   justify-content: center;
 }
 .product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider {
-  display: flex;
+  display: none !important;
   display: flex;
   flex-direction: column;
   align-items: center;
