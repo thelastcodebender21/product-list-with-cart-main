@@ -22,6 +22,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 35px;
 }
 .product-cart-container .product-grid-container h1 {
   margin: 35px 0;
@@ -121,4 +122,37 @@ button {
   color: hsl(14, 86%, 42%);
   font-weight: 600;
   font-size: 16px;
+}
+.product-cart-container .cart-grid-container {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  background-color: hsl(20, 50%, 98%);
+  border-radius: 8px;
+  padding: 0 7%;
+}
+.product-cart-container .cart-grid-container h2 {
+  color: hsl(14, 86%, 42%);
+  margin: 25px 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+.product-cart-container .cart-grid-container .cart-empty-items {
+  display: flex;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.product-cart-container .cart-grid-container .cart-empty-items p {
+  color: hsl(12, 20%, 44%);
+  font-weight: 600;
+  line-height: 100%;
+  font-size: 14px;
+}
+.product-cart-container .cart-grid-container input {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

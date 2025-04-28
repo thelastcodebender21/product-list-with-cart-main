@@ -26,9 +26,11 @@ button{
   width: 100%;
   padding: 0 6%;
   @include flexCenter(column, center, center);
+  gap: 35px;
 
   // THE PRODUCT GRID
   .product-grid-container{
+
     h1{
       margin: 35px 0;
       font-size: 36px;
@@ -123,6 +125,30 @@ button{
 
   // THE CART GRID
   .cart-grid-container{
-
+    display: flex;
+    @include flexCenter(column, start, center);
+    background-color: hsl(20, 50%, 98%);
+    border-radius: 8px;
+    padding: 0 7%;
+    h2{
+      color: hsl(14, 86%, 42%);
+      margin: 25px 0;
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .cart-empty-items{
+      display: flex;
+      width: 100%;
+      @include flexCenter(column, center, center);
+      p{
+        color: hsl(12, 20%, 44%);
+        font-weight: 600;
+        line-height: 100%;
+        font-size: 14px;
+      }
+    }
+    input{
+      display: none;
+    }
   }
 }
