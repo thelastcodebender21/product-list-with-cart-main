@@ -33,11 +33,9 @@ button{
   width: 100%;
   padding: 0 6%;
   @include flexCenter(column, center, center);
-  gap: 35px;
 
   // THE PRODUCT GRID
   .product-grid-container{
-
     h1{
       margin: 35px 0;
       font-size: 36px;
@@ -140,12 +138,11 @@ button{
 
   // THE CART GRID
   .cart-grid-container{
-    width: 100%;
     display: flex;
     @include flexCenter(column, start, center);
     background-color: hsl(20, 50%, 98%);
     border-radius: 8px;
-    padding: 0 7%;  
+    padding: 0 7%;
     h2{
       color: hsl(14, 86%, 42%);
       margin: 25px 0;
@@ -163,140 +160,8 @@ button{
         font-size: 14px;
       }
     }
-
-    #prod1:checked ~ .cart-empty-items{  
-      display: none !important;
-    }
-
-    #prod1:checked ~ .cart-picked-items .cart-item1{
-      display: flex !important;
-    }
-
-
-    .hidden-checkbox{
+    input{
       display: none;
-    }
-
-    .cart-picked-items{
-      width: 100%;
-      display: flex;
-      @include flexCenter(column, start, center);
-      .cart-item-divider{
-        display: none !important;
-        @include flexCenter(column, center, center);
-        gap: 22px;
-        width: 100%;
-        .cart-item{
-          width: 100%;
-          display: flex;
-          @include flexCenter(row, center, space-between);
-          .cart-item-product{
-            display: flex;
-            @include flexCenter(column, start, center);
-            gap: 5px;
-            p{
-              font-size: 14px;
-              color: $product-name-color;
-              font-weight: 600;
-            }
-            span:nth-child(1){
-              color: hsl(14, 86%, 42%);
-              margin-right: 12px;
-            }
-            span:nth-child(2){
-              color: $product-type-color;
-              font-weight: 400;
-              margin-right: 8px;
-            }
-            span:nth-child(3){
-              color: $product-type-color;
-              font-weight: 600;  
-              margin: 0;
-            }
-          }
-          button{
-            display: flex;
-            @include flexCenter(row, center, end);
-            border: 1px solid $product-type-color;
-            background: none;
-            border-radius: 50%;
-            padding: 3px;
-            width: auto;
-            height: auto;
-          }
-
-          
-        }
-        hr{
-          color: hsl(13, 31%, 94%);
-          height: 1px;
-          opacity: 0.5;
-          width: 100%;
-          margin-bottom: 22px;
-        }
-      }
-
-      .order-summary{
-        margin: 25px 0;
-        display: flex;
-        @include flexCenter(column, start, center);
-        width: 100%;
-        gap: 30px;
-        .delivery-cost{
-          width: 100%;
-          display: flex;
-          @include flexCenter(row, center, space-between);
-          p:nth-child(1){
-            display: flex;
-            @include flexCenter(row, center, start);
-            color: $product-name-color;
-            font-weight: 400;
-            line-height: 100%;
-          }
-          p:nth-child(2){
-            display: flex;
-            @include flexCenter(row, center, end);
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 100%;
-          }
-        }
-        .carbon-order-container{
-          width: 100%;
-          display: flex;
-          gap: 10px;  
-          @include flexCenter(row, center, center);
-          padding: 16px 24px;
-          background-color: hsl(13, 31%, 94%);
-          border-radius: 8px;
-          p{
-            font-size: 14px;
-            color: $product-name-color;
-            span{
-  
-              font-weight: 600;
-            }
-          }
-        }
-
-        .Confirm-button{
-          width: 100%;
-          padding: 20px 32px;
-          border-radius: 32px;
-          border: none;
-          color: white;
-          background-color: hsl(14, 86%, 42%);
-          font-weight: 600;
-          font-size: 18px;
-          line-height: 100%;
-        }
-
-
-      }
-
-    
-
-     
     }
   }
 }
