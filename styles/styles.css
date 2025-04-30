@@ -11,10 +11,6 @@ body {
   width: 100vw;
 }
 
-.hidden-checkbox {
-  display: flex;
-}
-
 button {
   font-family: "Red Hat Text", sans-serif;
 }
@@ -26,6 +22,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 40px;
 }
 .product-cart-container .product-grid-container h1 {
   margin: 35px 0;
@@ -75,10 +72,11 @@ button {
   border: 1px solid hsl(7, 20%, 60%);
   background-color: hsl(20, 50%, 98%);
   margin-top: -22px;
+  margin-bottom: 5px;
   width: 45vw;
 }
 .product-cart-container .product-grid-container .product-grid .product .imageandbutton .add-to-cart-button-active {
-  display: flex;
+  display: none !important;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -90,7 +88,6 @@ button {
   border-radius: 32px;
   border: none;
   width: 45vw;
-  margin-top: -22px;
 }
 .product-cart-container .product-grid-container .product-grid .product .imageandbutton .add-to-cart-button-active .quantity-button {
   background: none;
@@ -104,15 +101,6 @@ button {
   padding: 8px;
   width: 10px;
   height: 10px;
-}
-.product-cart-container .product-grid-container .product-grid .product .imageandbutton .add-label, .product-cart-container .product-grid-container .product-grid .product .imageandbutton .remove-label {
-  display: none !important;
-}
-.product-cart-container .product-grid-container .product-grid .product .imageandbutton #prod1:not(:checked) ~ .add-label, .product-cart-container .product-grid-container .product-grid .product .imageandbutton .cart-empty-items {
-  display: flex !important;
-}
-.product-cart-container .product-grid-container .product-grid .product .imageandbutton #prod1:checked ~ .remove-label {
-  display: flex !important;
 }
 .product-cart-container .product-grid-container .product-grid .product .product-information {
   display: flex;
@@ -137,6 +125,7 @@ button {
   font-size: 16px;
 }
 .product-cart-container .cart-grid-container {
+  width: 100%;
   display: flex;
   display: flex;
   flex-direction: column;
@@ -144,7 +133,7 @@ button {
   justify-content: center;
   background-color: hsl(20, 50%, 98%);
   border-radius: 8px;
-  padding: 0 7%;
+  padding: 0 6%;
 }
 .product-cart-container .cart-grid-container h2 {
   color: hsl(14, 86%, 42%);
@@ -168,4 +157,134 @@ button {
 }
 .product-cart-container .cart-grid-container input {
   display: none;
+}
+.product-cart-container .cart-grid-container .cart-picked-items {
+  width: 100%;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider {
+  width: 100%;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider .cart-item {
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider .cart-item .cart-item-product {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 5px;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider .cart-item .cart-item-product .cart-item-product-name {
+  font-size: 14px;
+  color: hsl(14, 65%, 9%);
+  font-weight: 600;
+  line-height: 100%;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider .cart-item .cart-item-product span:nth-child(1) {
+  color: hsl(14, 86%, 42%);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%;
+  margin-right: 15px;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider .cart-item .cart-item-product span:nth-child(2) {
+  color: hsl(7, 20%, 60%);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  margin-right: 10px;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider .cart-item .cart-item-product span:nth-child(3) {
+  color: hsl(7, 20%, 60%);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  margin-right: 10px;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider .cart-item button {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid hsl(7, 20%, 60%);
+  border-radius: 50%;
+  padding: 8px;
+  width: 10px;
+  height: 10px;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider hr {
+  opacity: 0.2;
+  margin: 10px 0;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .order-summary {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .order-summary .delivery-cost {
+  width: 100%;
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .order-summary .delivery-cost p:nth-child(1) {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  font-weight: 400;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .order-summary .delivery-cost p:nth-child(2) {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  font-size: 30px;
+  font-weight: 700;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .order-summary .carbon-order-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: hsl(13, 31%, 94%);
+  padding: 12px 18px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .order-summary .carbon-order-container p {
+  font-weight: 400;
+  font-size: 15px;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .order-summary .carbon-order-container p span {
+  font-weight: 600;
+}
+.product-cart-container .cart-grid-container .cart-picked-items .order-summary button {
+  border: none;
+  border-radius: 32px;
+  width: 100%;
+  padding: 18px 24px;
+  background-color: hsl(14, 86%, 42%);
+  color: hsl(20, 50%, 98%);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=styles.css.map */

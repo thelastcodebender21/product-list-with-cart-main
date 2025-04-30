@@ -14,9 +14,6 @@ body{
   width: 100vw;
 }
 
-.hidden-checkbox{
-  display: flex; 
-}
 
 button{
   font-family: "Red Hat Text", sans-serif;
@@ -25,14 +22,11 @@ button{
 // COMBINATION OF THE PRODUCT GRID AND THE CART GRID
 
 
-
-
-
-
 .product-cart-container{
   width: 100%;
   padding: 0 6%;
   @include flexCenter(column, center, center);
+  gap: 40px;
 
   // THE PRODUCT GRID
   .product-grid-container{
@@ -73,11 +67,12 @@ button{
             border: 1px solid hsl(7, 20%, 60%);
             background-color: hsl(20, 50%, 98%);
             margin-top: -22px;
+            margin-bottom: 5px;
             width: 45vw;
           }
 
           .add-to-cart-button-active{
-            display: flex;
+            display: none !important;
             @include flexCenter(row, center, center);
             background-color: hsl(14, 86%, 42%);
             color: white;
@@ -86,7 +81,6 @@ button{
             border-radius: 32px;
             border: none;
             width: 45vw;
-            margin-top: -22px;
             .quantity-button{
               background: none;
               border: 1px solid white;
@@ -98,19 +92,7 @@ button{
               height: 10px;
             }
           }
-          .add-label, .remove-label{
-            display: none !important;
-          }
-
-          #prod1:not(:checked) ~ .add-label, .cart-empty-items{
-            display: flex !important;
-          }
-
-          #prod1:checked ~ .remove-label{
-            display: flex !important;
-          }
         }
-
         .product-information{
           display: flex;
           @include flexCenter(column, start, center);
@@ -131,21 +113,23 @@ button{
           }
 
         }
-      }
     }
   }
+}
+
  
 
   // THE CART GRID
   .cart-grid-container{
-    display: flex;
+    width: 100%;
+    display: flex;  
     @include flexCenter(column, start, center);
     background-color: hsl(20, 50%, 98%);
     border-radius: 8px;
-    padding: 0 7%;
+    padding: 0 6%;
     h2{
       color: hsl(14, 86%, 42%);
-      margin: 25px 0;
+      margin: 25px 0; 
       font-size: 30px;
       font-weight: 700;
     }
@@ -163,5 +147,117 @@ button{
     input{
       display: none;
     }
-  }
+
+    .cart-picked-items{
+      width: 100%;
+      .cart-item-divider{
+        width: 100%;
+        .cart-item{
+          display: flex;
+          @include flexCenter(row, center, space-between);
+          .cart-item-product{
+            display: flex;
+            @include flexCenter(column, start, center);
+            gap: 5px;
+            .cart-item-product-name{
+              font-size: 14px;
+              color: $product-name-color;
+              font-weight: 600;
+              line-height: 100%;
+            }
+            span:nth-child(1){
+              color: hsl(14, 86%, 42%);
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 100%;
+              margin-right: 15px;
+            }
+            span:nth-child(2){
+              color: $product-type-color;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 100%;
+              margin-right: 10px;
+            }
+            span:nth-child(3){
+              color: $product-type-color;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 100%;
+              margin-right: 10px;
+            }
+          }
+          button{
+            display: flex;
+            @include flexCenter(column, center, center);
+            background: none;
+            border: 1px solid $product-type-color;
+            border-radius: 50%;
+            padding: 8px;
+            width: 10px;
+            height: 10px;
+          }
+        }
+        hr{
+          opacity: 0.2;
+          margin: 10px 0;
+        }
+      }
+
+      .order-summary{
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        @include flexCenter(column, center, center);
+        gap: 30px;
+        .delivery-cost{
+          width: 100%;
+          display: flex;
+          @include flexCenter(row, center, space-between);
+          p:nth-child(1){
+            display: flex;
+            @include flexCenter(column, center, start);
+            font-weight: 400;
+
+          }
+          p:nth-child(2){
+            display: flex;
+            @include flexCenter(column, center, end);
+            font-size: 30px;
+            font-weight: 700;
+          }
+        }
+        .carbon-order-container{
+          @include flexCenter(row, center, center);
+          gap: 10px;
+          background-color: hsl(13, 31%, 94%);
+          padding: 12px 18px;
+          width: 100%;
+          border: none;
+          border-radius: 8px;
+          p{
+            font-weight: 400;
+            font-size: 15px;
+            span{
+              font-weight: 600;
+            }
+          }
+        }
+
+        button{
+          border: none;
+          border-radius: 32px;
+          width: 100%;
+          padding: 18px 24px;
+          background-color: hsl(14, 86%, 42%);
+          color: hsl(20, 50%, 98%);
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 20px;
+        
+        }
+      }
+    }
+}
+
 }
