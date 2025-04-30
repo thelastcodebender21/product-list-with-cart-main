@@ -34,6 +34,9 @@ button {
 .product-cart-container .product-grid-container .product-image {
   width: 100%;
 }
+.product-cart-container .product-grid-container .add-to-cart-button {
+  width: 100%;
+}
 .product-cart-container .product-grid-container .product-grid {
   display: flex;
   display: flex;
@@ -57,6 +60,7 @@ button {
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 8px;
+  z-index: 0;
 }
 .product-cart-container .product-grid-container .product-grid .product .imageandbutton .add-to-cart-button {
   display: flex;
@@ -64,7 +68,9 @@ button {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 9px 24px;
+  font-size: 15px;
+  z-index: 10;
+  padding: 8px 12px;
   border-radius: 32px;
   gap: 8px;
   color: hsl(14, 65%, 9%);
@@ -73,7 +79,23 @@ button {
   background-color: hsl(20, 50%, 98%);
   margin-top: -22px;
   margin-bottom: 5px;
-  width: 45vw;
+  width: 60%;
+}
+.product-cart-container .product-grid-container .product-grid .product .imageandbutton .add-to-cart-button:hover {
+  background-color: hsl(14, 58%, 66%);
+  cursor: pointer;
+  transition: 0.1s;
+  border: none;
+}
+.product-cart-container .product-grid-container .product-grid .product .imageandbutton .add-to-cart-button:active, .product-cart-container .product-grid-container .product-grid .product .imageandbutton ::after {
+  background-image: radial-gradient(hsl(14, 86%, 42%), hsl(20, 50%, 98%));
+  cursor: pointer;
+  transition: 0.1s;
+  border: none;
+}
+.product-cart-container .product-grid-container .product-grid .product .imageandbutton .product-image:hover {
+  border: 3px solid hsl(14, 86%, 42%);
+  transition: 0.1s;
 }
 .product-cart-container .product-grid-container .product-grid .product .imageandbutton .add-to-cart-button-active {
   display: none !important;
@@ -87,7 +109,7 @@ button {
   padding: 11px 24px;
   border-radius: 32px;
   border: none;
-  width: 45vw;
+  width: 45%;
 }
 .product-cart-container .product-grid-container .product-grid .product .imageandbutton .add-to-cart-button-active .quantity-button {
   background: none;
@@ -124,6 +146,87 @@ button {
   font-weight: 600;
   font-size: 16px;
 }
+.product-cart-container #product1:checked + .cart-item-divider, .product-cart-container .cart-item1, .product-cart-container hr {
+  display: flex !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+.product-cart-container #product2:checked + .cart-item-divider, .product-cart-container .cart-item2, .product-cart-container hr {
+  display: flex !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+.product-cart-container #product3:checked + .cart-item-divider, .product-cart-container .cart-item3, .product-cart-container hr {
+  display: flex !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+.product-cart-container #product4:checked + .cart-item-divider, .product-cart-container .cart-item4, .product-cart-container hr {
+  display: flex !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+.product-cart-container #product5:checked + .cart-item-divider, .product-cart-container .cart-item5, .product-cart-container hr {
+  display: flex !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+.product-cart-container #product6:checked + .cart-item-divider, .product-cart-container .cart-item6, .product-cart-container hr {
+  display: flex !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+.product-cart-container #product7:checked + .cart-item-divider, .product-cart-container .cart-item7, .product-cart-container hr {
+  display: flex !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+.product-cart-container #product8:checked + .cart-item-divider, .product-cart-container .cart-item8, .product-cart-container hr {
+  display: flex !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+.product-cart-container #product9:checked + .cart-item-divider, .product-cart-container .cart-item9, .product-cart-container hr {
+  display: flex !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  margin-bottom: 20px;
+}
 .product-cart-container .cart-grid-container {
   width: 100%;
   display: flex;
@@ -148,6 +251,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 40px;
 }
 .product-cart-container .cart-grid-container .cart-empty-items p {
   color: hsl(12, 20%, 44%);
@@ -162,10 +266,12 @@ button {
   width: 100%;
 }
 .product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider {
+  display: none !important;
   width: 100%;
 }
 .product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider .cart-item {
   display: flex;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -180,14 +286,14 @@ button {
   gap: 5px;
 }
 .product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider .cart-item .cart-item-product .cart-item-product-name {
-  font-size: 14px;
+  font-size: 18px;
   color: hsl(14, 65%, 9%);
   font-weight: 600;
   line-height: 100%;
 }
 .product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider .cart-item .cart-item-product span:nth-child(1) {
   color: hsl(14, 86%, 42%);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 100%;
   margin-right: 15px;
@@ -195,14 +301,14 @@ button {
 .product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider .cart-item .cart-item-product span:nth-child(2) {
   color: hsl(7, 20%, 60%);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 100%;
   margin-right: 10px;
 }
 .product-cart-container .cart-grid-container .cart-picked-items .cart-item-divider .cart-item .cart-item-product span:nth-child(3) {
   color: hsl(7, 20%, 60%);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 100%;
   margin-right: 10px;
 }
@@ -277,7 +383,7 @@ button {
 .product-cart-container .cart-grid-container .cart-picked-items .order-summary .carbon-order-container p span {
   font-weight: 600;
 }
-.product-cart-container .cart-grid-container .cart-picked-items .order-summary button {
+.product-cart-container .cart-grid-container .cart-picked-items .order-summary .Confirm-button {
   border: none;
   border-radius: 32px;
   width: 100%;
@@ -287,4 +393,65 @@ button {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 770px) {
+  body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+  .product-image {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .product-cart-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 100vw !important;
+    height: 100vh;
+    align-items: start;
+    justify-content: center;
+    padding: 2% 5%;
+    gap: 30px !important;
+  }
+  .product-cart-container .product-grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+  }
+  .product-cart-container .product-grid-container h1 {
+    margin: 0;
+  }
+  .product-cart-container .product-grid-container .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 2% 0;
+  }
+  .product-cart-container .product-grid-container .product-grid .product .imageandbutton .add-to-cart-button {
+    padding: 8px 24px;
+    font-size: 14px;
+    width: 80% !important;
+  }
+  .cart-grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    height: auto;
+    width: 40%;
+    padding: 25px 20px !important;
+  }
+  .cart-grid-container h2 {
+    margin-top: 0 !important;
+  }
 }/*# sourceMappingURL=styles.css.map */
