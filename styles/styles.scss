@@ -85,14 +85,14 @@ button{
             background-color: hsl(14, 58%, 66%);
             cursor: pointer;
             transition: 0.1s;
-            border: none;
+            border: none !important;
           }
 
           .add-to-cart-button:active, ::after{
             background-image: radial-gradient(hsl(14, 86%, 42%), hsl(20, 50%, 98%));
             cursor: pointer;
             transition: 0.1s;
-            border: none;
+            border: none !important;
 
           }
 
@@ -101,6 +101,7 @@ button{
           .product-image:hover{
             border: 3px solid hsl(14, 86%, 42%);
             transition: 0.1s;
+            cursor: pointer;
           }
 
 
@@ -358,6 +359,7 @@ button{
           font-weight: 600;
           margin-bottom: 20px;
           text-decoration: none;
+          text-align: center;
         
         }
       }
@@ -421,4 +423,210 @@ button{
     }
 
   }
+}
+
+
+// POPUP>HTML PAGE
+
+body{
+  .order-confirmed-container{
+    height: 100%;
+    width: 100%;
+    background: rgb(88, 81, 81);
+    .order-confirmed-grey{
+      background-color: rgb(88, 81, 81);
+      width: 100%;
+      opacity: 0.9;
+      padding: 4%;
+      h1{
+        font-size: 36px;
+        line-height: 100%;
+      }
+
+    }
+    .order-confirmed-white{
+      background-color: hsl(20, 50%, 98%);
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      @include flexCenter(column, start, center);
+      padding: 0 4%;
+      border-top-right-radius: 16px;
+      border-top-left-radius: 16px;
+      #check-mark{
+        margin: 35px 0;
+      }
+      h1{
+        font-size: 36px;
+        line-height: 100%;
+        margin-bottom: 20px;
+        width: 46%;
+      }
+      h5{
+        color: hsl(7, 20%, 60%);
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 25px;
+        letter-spacing: 0;
+        line-height: 100%;
+      }
+
+      .order-confirmed-products-section{
+        background-color: hsl(13, 31%, 94%);
+        width: 100%;
+        padding: 4.5%;
+        border-radius: 8px;
+        margin-bottom: 35px;
+        .order-confirmed-product{
+          @include flexCenter(row, center, space-between);
+          .order-confirmed-product-image-text{
+            @include flexCenter(row, center, center);
+            gap: 12px;
+            img{
+              @include flexCenter(row, center, start);
+              border-radius: 8px;
+              height: 60px;
+              width: 60px;
+            }
+            .order-confirmed-product-text{
+              @include flexCenter(column, start, center);
+              gap: 12px;
+              p{
+                font-size: 16px;
+                color: $product-name-color;
+                font-weight: 600;
+                line-height: 100%;
+                span:nth-child(1){
+                  color: hsl(14, 86%, 42%);
+                }
+                span:nth-child(2){
+                  color: $product-type-color;
+                }
+              }
+
+            }
+            
+            }
+          .order-confirmed-product-price{
+              @include flexCenter(row, center, end);
+              p{
+                color: $product-name-color;
+                font-size: 18px;
+                font-weight: 700;
+          }
+          }
+        }
+        hr{
+          opacity: 0.2;
+          margin: 20px 0;
+        }
+        
+        .delivery-fee{
+          @include flexCenter(row, center, space-between);
+          p:nth-child(1){
+            @include flexCenter(row, center, start);
+            font-size: 18px;
+            color: $product-name-color;
+          }
+          p:nth-child(2){
+            @include flexCenter(row, center, end);
+            font-size: 30px;
+            font-weight: 700;
+          }
+        }
+      }
+
+      a{
+        text-decoration: none;
+        width: 100%;
+        background-color: hsl(14, 86%, 42%);
+        color: hsl(20, 50%, 98%);
+        border: none;
+        border-radius: 32px;
+        padding: 16px 24px;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.2;
+        font-size: 18px;
+      }
+    }
+  }
+
+  }
+  @media screen and (min-width:770px){
+    body{
+      @include flexCenter(column, center, center);
+      background-color: hsl(13, 31%, 94%);
+    }
+
+    .order-confirmed-container{
+      height: 62% !important;
+      width: 35% !important;
+      background: none !important;
+      .order-confirmed-grey{
+        display: none;
+      }
+      .order-confirmed-white{
+        border-radius: 10px;
+        padding: 0 3%;
+      }
+      #check-mark{
+        margin: 20px 0 !important;
+        width: 8%;
+        height: 8%;
+      }
+      h1 {
+        font-size: 25px !important;
+        width: 100% !important;
+        margin-bottom: 10px !important;
+      }
+      h5{
+        font-size: 14px !important;
+        margin-bottom: 12.5px !important;
+      }
+
+      .order-confirmed-products-section{
+        padding: 3.5% !important;
+        margin-bottom: 18px !important;
+        .order-confirmed-product{
+          .order-confirmed-product-image-text{
+            img{
+              height: 45px !important;
+              width: 45px !important;
+            }
+            .order-confirmed-product-text{
+              gap: 6px !important;
+              p{
+                font-size: 14px !important;
+              }
+            }
+          }
+          .order-confirmed-product-price{
+            p{
+              font-size: 16px !important;
+            }
+          }
+          
+        }
+        hr{
+          margin: 10px 0 !important;
+        }
+
+        .delivery-fee{
+          p:nth-child(1){
+            font-size: 16px !important;
+          }
+          p:nth-child(2){
+            font-size: 26px !important;
+          }
+        } 
+      }
+
+      a{
+        font-size: 16px !important;
+      }
+    }
+
+
+
 }

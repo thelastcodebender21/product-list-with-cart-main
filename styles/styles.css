@@ -85,17 +85,18 @@ button {
   background-color: hsl(14, 58%, 66%);
   cursor: pointer;
   transition: 0.1s;
-  border: none;
+  border: none !important;
 }
 .product-cart-container .product-grid-container .product-grid .product .imageandbutton .add-to-cart-button:active, .product-cart-container .product-grid-container .product-grid .product .imageandbutton ::after {
   background-image: radial-gradient(hsl(14, 86%, 42%), hsl(20, 50%, 98%));
   cursor: pointer;
   transition: 0.1s;
-  border: none;
+  border: none !important;
 }
 .product-cart-container .product-grid-container .product-grid .product .imageandbutton .product-image:hover {
   border: 3px solid hsl(14, 86%, 42%);
   transition: 0.1s;
+  cursor: pointer;
 }
 .product-cart-container .product-grid-container .product-grid .product .imageandbutton .add-to-cart-button-active {
   display: none !important;
@@ -394,6 +395,7 @@ button {
   font-weight: 600;
   margin-bottom: 20px;
   text-decoration: none;
+  text-align: center;
 }
 
 @media screen and (min-width: 770px) {
@@ -453,5 +455,213 @@ button {
   }
   .cart-grid-container h2 {
     margin-top: 0 !important;
+  }
+}
+body .order-confirmed-container {
+  height: 100%;
+  width: 100%;
+  background: rgb(88, 81, 81);
+}
+body .order-confirmed-container .order-confirmed-grey {
+  background-color: rgb(88, 81, 81);
+  width: 100%;
+  opacity: 0.9;
+  padding: 4%;
+}
+body .order-confirmed-container .order-confirmed-grey h1 {
+  font-size: 36px;
+  line-height: 100%;
+}
+body .order-confirmed-container .order-confirmed-white {
+  background-color: hsl(20, 50%, 98%);
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 0 4%;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+}
+body .order-confirmed-container .order-confirmed-white #check-mark {
+  margin: 35px 0;
+}
+body .order-confirmed-container .order-confirmed-white h1 {
+  font-size: 36px;
+  line-height: 100%;
+  margin-bottom: 20px;
+  width: 46%;
+}
+body .order-confirmed-container .order-confirmed-white h5 {
+  color: hsl(7, 20%, 60%);
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 25px;
+  letter-spacing: 0;
+  line-height: 100%;
+}
+body .order-confirmed-container .order-confirmed-white .order-confirmed-products-section {
+  background-color: hsl(13, 31%, 94%);
+  width: 100%;
+  padding: 4.5%;
+  border-radius: 8px;
+  margin-bottom: 35px;
+}
+body .order-confirmed-container .order-confirmed-white .order-confirmed-products-section .order-confirmed-product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+body .order-confirmed-container .order-confirmed-white .order-confirmed-products-section .order-confirmed-product .order-confirmed-product-image-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+body .order-confirmed-container .order-confirmed-white .order-confirmed-products-section .order-confirmed-product .order-confirmed-product-image-text img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  border-radius: 8px;
+  height: 60px;
+  width: 60px;
+}
+body .order-confirmed-container .order-confirmed-white .order-confirmed-products-section .order-confirmed-product .order-confirmed-product-image-text .order-confirmed-product-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 12px;
+}
+body .order-confirmed-container .order-confirmed-white .order-confirmed-products-section .order-confirmed-product .order-confirmed-product-image-text .order-confirmed-product-text p {
+  font-size: 16px;
+  color: hsl(14, 65%, 9%);
+  font-weight: 600;
+  line-height: 100%;
+}
+body .order-confirmed-container .order-confirmed-white .order-confirmed-products-section .order-confirmed-product .order-confirmed-product-image-text .order-confirmed-product-text p span:nth-child(1) {
+  color: hsl(14, 86%, 42%);
+}
+body .order-confirmed-container .order-confirmed-white .order-confirmed-products-section .order-confirmed-product .order-confirmed-product-image-text .order-confirmed-product-text p span:nth-child(2) {
+  color: hsl(7, 20%, 60%);
+}
+body .order-confirmed-container .order-confirmed-white .order-confirmed-products-section .order-confirmed-product .order-confirmed-product-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+body .order-confirmed-container .order-confirmed-white .order-confirmed-products-section .order-confirmed-product .order-confirmed-product-price p {
+  color: hsl(14, 65%, 9%);
+  font-size: 18px;
+  font-weight: 700;
+}
+body .order-confirmed-container .order-confirmed-white .order-confirmed-products-section hr {
+  opacity: 0.2;
+  margin: 20px 0;
+}
+body .order-confirmed-container .order-confirmed-white .order-confirmed-products-section .delivery-fee {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+body .order-confirmed-container .order-confirmed-white .order-confirmed-products-section .delivery-fee p:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  font-size: 18px;
+  color: hsl(14, 65%, 9%);
+}
+body .order-confirmed-container .order-confirmed-white .order-confirmed-products-section .delivery-fee p:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  font-size: 30px;
+  font-weight: 700;
+}
+body .order-confirmed-container .order-confirmed-white a {
+  text-decoration: none;
+  width: 100%;
+  background-color: hsl(14, 86%, 42%);
+  color: hsl(20, 50%, 98%);
+  border: none;
+  border-radius: 32px;
+  padding: 16px 24px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.2;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 770px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(13, 31%, 94%);
+  }
+  .order-confirmed-container {
+    height: 62% !important;
+    width: 35% !important;
+    background: none !important;
+  }
+  .order-confirmed-container .order-confirmed-grey {
+    display: none;
+  }
+  .order-confirmed-container .order-confirmed-white {
+    border-radius: 10px;
+    padding: 0 3%;
+  }
+  .order-confirmed-container #check-mark {
+    margin: 20px 0 !important;
+    width: 8%;
+    height: 8%;
+  }
+  .order-confirmed-container h1 {
+    font-size: 25px !important;
+    width: 100% !important;
+    margin-bottom: 10px !important;
+  }
+  .order-confirmed-container h5 {
+    font-size: 14px !important;
+    margin-bottom: 12.5px !important;
+  }
+  .order-confirmed-container .order-confirmed-products-section {
+    padding: 3.5% !important;
+    margin-bottom: 18px !important;
+  }
+  .order-confirmed-container .order-confirmed-products-section .order-confirmed-product .order-confirmed-product-image-text img {
+    height: 45px !important;
+    width: 45px !important;
+  }
+  .order-confirmed-container .order-confirmed-products-section .order-confirmed-product .order-confirmed-product-image-text .order-confirmed-product-text {
+    gap: 6px !important;
+  }
+  .order-confirmed-container .order-confirmed-products-section .order-confirmed-product .order-confirmed-product-image-text .order-confirmed-product-text p {
+    font-size: 14px !important;
+  }
+  .order-confirmed-container .order-confirmed-products-section .order-confirmed-product .order-confirmed-product-price p {
+    font-size: 16px !important;
+  }
+  .order-confirmed-container .order-confirmed-products-section hr {
+    margin: 10px 0 !important;
+  }
+  .order-confirmed-container .order-confirmed-products-section .delivery-fee p:nth-child(1) {
+    font-size: 16px !important;
+  }
+  .order-confirmed-container .order-confirmed-products-section .delivery-fee p:nth-child(2) {
+    font-size: 26px !important;
+  }
+  .order-confirmed-container a {
+    font-size: 16px !important;
   }
 }/*# sourceMappingURL=styles.css.map */
